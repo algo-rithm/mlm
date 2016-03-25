@@ -1,0 +1,32 @@
+<% provide(:title, "Projects") %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	<div class="span12">
+		<h1>All Projects</h1>
+		
+		<table class="table table-striped">
+  			<tr>
+    			<th>Name</th>
+    			<th>Client</th>
+    			<th>Start Date</th>
+    			<th>Goal Date</th>
+    			<th>Description</th>
+    			<th></th>
+    			<th></th>
+  			</tr>
+		
+		<% @projects.each do |project| %>
+  			<tr>
+    			<td><%= project.name %></td>
+    			<td><%= project.client_id %></td>
+    			<td><%= project.start_date %></td>
+    			<td><%= project.goal_date %></td>
+    			<td><%= project.description %></td>
+    			<td><%= link_to 'Show', project %></td>
+    			<td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  			</tr>
+		<% end %>
+		</table>	
+	</div> 
+</div>

@@ -1,0 +1,13 @@
+<% provide(:title, "All MGRS")%>
+<%= render 'shared/mgr_header' %>
+<h1>All Managers</h1>
+
+<ul class="managers">
+	<% @managers.each do |manager| %>
+	<li>
+		<%= gravatar_for manager %>
+		<%= link_to manager.name, manager %>
+	</li>
+	<% end %>
+</ul>
+

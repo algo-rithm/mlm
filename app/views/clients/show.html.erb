@@ -1,0 +1,88 @@
+<% provide(:title, @client.name) %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	<div class="span12">
+		<h1>Client: <%= @client.name %></h1>
+		<dl class="dl-horizontal">
+			<dt>Phone</dt>
+			<dd><%= @client.phone %></dd>
+			<dt>Email</dt>
+			<dd><%= @client.email %></dd>
+			<dt>Contact</dt>
+			<dd><%= @client.contact %></dd>
+			<dt>Street One</dt>
+			<dd><%= @client.street_one %></dd>
+			<dt>Street Two</dt>
+			<dd><%= @client.street_two %></dd>
+			<dt>City</dt>
+			<dd><%= @client.city%></dd>
+			<dt>State</dt>
+			<dd><%= @client.state%></dd>
+			<dt>Zip Code</dt>
+			<dd><%= @client.zip%></dd>
+		</dl>
+		<br />
+		<% if @client.projects.any? %>
+		
+			<h3>Projects (<%= @client.projects.count %>)</h3>
+			<table class="table table-striped">
+				<tr>
+					<th>Name</th>
+					<th>Start Date</th>
+					<th>Goal Date</th>
+					<th>Description</th>
+					<th></th>
+				</tr>
+				<% @client.projects.each do |project| %>
+				<tr>
+					<td><%= project.name %></td>
+					<td><%= project.start_date %></td>
+					<td><%= project.goal_date %></td>
+					<td><%= project.description %><td>
+					<td><%= link_to 'Edit', edit_project_path(project) %></td>	
+				</tr>
+				<% end %>
+			</table>
+		
+		<% end %>
+		<% if @client.jobs.any? %>
+		
+			<h3>Jobs (<%= @client.jobs.count %>)</h3>
+			<table class="table table-striped">
+				<tr>
+					<th>Name</th>
+					<th>SKU</th>
+					<th>Fabric</th>
+					<th>Prerequisites</th>
+					<th>Dyed</th>
+					<th>Finished</th>
+					<th>Sewn</th>
+					<th>Packaged</th>
+					<th>Location</th>
+					<th>Asking Price</th>
+					<th>Sold Price</th>
+					<th></th>
+				</tr>
+				<% @client.jobs.each do |job| %>
+				<tr>
+					<td><%= job.name %></td>
+					<td><%= job.sku %></td>
+					<td><%= job.fabric_id %></td>
+					<td><%= job.prerequisites %><td>
+					<td><%= job.died %><td>
+					<td><%= job.finished %><td>
+					<td><%= job.sewn %><td>
+					<td><%= job.packaged %><td>
+					<td><%= job.location %><td>
+					<td><%= job.asking_price %><td>
+					<td><%= job.sold_price %><td>
+					<td><%= link_to 'Edit', edit_job_path(job) %></td>	
+				</tr>
+				<% end %>
+			</table>
+		
+		<% end %>
+	</div>
+
+</div>

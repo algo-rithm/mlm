@@ -1,0 +1,29 @@
+# == Schema Information
+#
+# Table name: projects
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  client_id   :integer
+#  start_date  :date
+#  goal_date   :date
+#  description :text
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  client_id: 1
+  start_date: 2013-06-10
+  goal_date: 2013-06-10
+  description: MyText
+
+two:
+  name: MyString
+  client_id: 1
+  start_date: 2013-06-10
+  goal_date: 2013-06-10
+  description: MyText

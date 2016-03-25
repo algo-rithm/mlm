@@ -1,0 +1,25 @@
+<% provide(:title, "Contact") %>
+<%= render 'shared/mgr_header' %>
+
+<div class="mgr-content">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @contact.name %>
+  <br />
+  <b>Phone:</b>
+  <%= @contact.phone %>
+  <br />
+  <b>Email:</b>
+  <%= @contact.email %>
+  <br />
+  <b>Comment:</b>
+  <%= @contact.comment %>
+  <br />
+</p>
+
+
+
+<%= link_to 'Back', contacts_path %>
+</div>

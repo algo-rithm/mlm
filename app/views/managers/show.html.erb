@@ -1,0 +1,11 @@
+<% provide(:title, @manager.name) %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	
+	<div class="span8">
+		<div class="grav-image"><%= gravatar_for @manager %></div>
+		<h3><%= @manager.name %></h3>
+		<h4><%= @manager.email %></h4>
+	</div> 
+</div>

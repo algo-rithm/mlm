@@ -1,0 +1,34 @@
+<% provide(:title, "Fabrics") %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	<div class="span12">
+		<h1>All Fabrics</h1>
+		
+		<table class="table table-striped">
+  			<tr>
+  				<th>Name</th>
+    			<th>Type</th>
+    			<th>Length</th>
+    			<th>Purchase Date</th>
+    			<th>Purchase Price</th>
+    			<th>Notes</th>
+    			<th></th>
+    			<th></th>
+  			</tr>
+		
+		<% @fabrics.each do |fabric| %>
+  			<tr>
+  				<td><%= fabric.name %></td>
+    			<td><%= fabric.silktype %></td>
+    			<td><%= fabric.length %></td>
+    			<td><%= fabric.purchase_date %></td>
+    			<td><%= fabric.length %></td>
+    			<td><%= fabric.notes %></td>
+    			<td><%= link_to 'Edit', edit_fabric_path(fabric) %></td>
+    			<td><%= link_to 'Destroy', fabric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  			</tr>
+		<% end %>
+		</table>	
+	</div> 
+</div>

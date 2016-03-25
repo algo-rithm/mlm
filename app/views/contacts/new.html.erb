@@ -1,0 +1,47 @@
+<% provide(:title, "Contact")%>
+
+<div class="row-fluid">
+	<div class="span6 offset1">
+		<h3>Interested in...</h3>
+		<h4>a one of a kind gown, lingerie, Kimono capes, neckties, or scarf inspired by you!</h4>
+		<p>Please feel free to contact me with your inquiries and inspiration. <strong>Keep me in mind! I'm 'dying' to dress you in my silks!'</strong></p>
+		
+		<%= form_for(@contact) do |f| %>
+		<%= render 'shared/error_messages'%>
+		
+		<%= f.label :name, "Name" %>
+		<%= f.text_field :name %>
+		
+		<%= f.label :phone, "Phone Number (Optional)" %>
+		<%= f.text_field :phone %>
+		
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		
+		<%= f.label :comment %>
+		<%= f.text_area :comment, :size => "5x10" %>
+		
+		<br />
+		<%= f.submit "Submit", class: "c9c-contact-btn btn"%>
+		<% end %>
+		
+	</div>
+	<div class="span4 offset1 c9c-address">
+		<address>
+  		<strong>Michelle Li Murphy</strong><br>
+  		506 Baltimore Street #2<br>
+  		Hanover, PA 17331<br>
+  		<abbr title="Phone">P:</abbr> (917) 334-8190
+		</address>
+ 
+	<address>
+  		<a href="mailto:#">mlm@barbarianhead.com</a>
+	</address>
+	
+	<%= link_to image_tag("about.gif"), about_path %>
+	<div class="c9c-panel-emptyblock30"></div>
+	<%= link_to image_tag("custom.gif"), custom_path%>
+	<div class="c9c-panel-emptyblock30"></div>
+	<%= link_to image_tag("links.gif"), links_path %>
+	</div>
+</div>

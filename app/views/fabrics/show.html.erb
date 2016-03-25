@@ -1,0 +1,22 @@
+<% provide(:title, @fabric.name) %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	<div class="span12">
+		<h1>Client: <%= @fabric.name %></h1>
+		<dl class="dl-horizontal">
+			<dt>Name</dt>
+			<dd><%= @fabric.name %></dd>
+			<dt>Type</dt>
+			<dd><%= @fabric.silktype %></dd>
+			<dt>Length</dt>
+			<dd><%= @fabric.length %></dd>
+			<dt>Purchase Date</dt>
+			<dd><%= @fabric.purchase_date %></dd>
+			<dt>Purchase Price</dt>
+			<dd><%= @fabric.purchase_price %></dd>
+			<dt>Notes</dt>
+			<dd><%= @fabric.notes%></dd>
+		</dl>
+	</div>
+</div>

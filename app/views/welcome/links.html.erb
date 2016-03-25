@@ -1,0 +1,38 @@
+<% provide(:title, "Links")%>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+(function(d){
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.async = true;
+  p.src = '//assets.pinterest.com/js/pinit.js';
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+
+
+<div class="row-fluid">
+	<div class="span12">
+		<div class="span4">
+			
+		<div class="c9c-panel-emptyblock90"></div>
+		<%= link_to image_tag("contact.gif"), new_contact_path %>
+		
+		</div>
+		
+		<div class="span8">
+			<h2>Facebook</h2>
+			<div class="fb-like-box" data-href="https://www.facebook.com/stonewellstudio" data-width="292" data-show-faces="true" data-colorscheme="dark" data-stream="true" data-header="false"></div>
+		</div>
+	</div>
+</div>

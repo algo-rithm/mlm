@@ -1,0 +1,15 @@
+<% provide(:title, 'Edit Fabric')%>
+<%= render 'shared/mgr_header' %>
+
+
+<div class="row mgr-content">
+<h1>New Fabric</h1>	
+	
+	<div class="span6 offset3">
+		<%= form_tag(:action => 'update') do -%>
+			<%= render(:partial => 'form') %>
+			<%= submit_tag("Create") %>
+		<% end -%>
+		
+	</div>
+</div>

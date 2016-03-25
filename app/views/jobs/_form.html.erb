@@ -1,0 +1,50 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<td><%= text_field(:job, :name)%></td>
+	</tr>
+	<tr>
+		<th>Project</th>
+		<td><%= select(:job, :project_id, @project_list )%></td>
+	</tr>
+	<tr>
+		<th>Sku</th>
+		<td><%= text_field(:job, :sku) %></td>
+	</tr>
+	<tr>
+		<th>Fabric</th>
+		<td><%= select(:job, :fabric_id, @fabric_list) %></td>
+	</tr>
+	<tr>
+		<th>Prerequisites?</th>
+		<td><%= check_box(:job, :prerequisites)%></td>
+	</tr>
+	<tr>
+		<th>Died?</th>
+		<td><%= check_box(:job, :died)%></td>
+	</tr>
+	<tr>
+		<th>Finished?</th>
+		<td><%= check_box(:job, :finished)%></td>
+	</tr>
+	<tr>
+		<th>Sewn?</th>
+		<td><%= check_box(:job, :sewn)%></td>
+	</tr>
+	<tr>
+		<th>Packaged?</th>
+		<td><%= check_box(:job, :packaged)%></td>
+	</tr>
+	<tr>
+		<th>Location</th>
+		<td><%= text_field(:job, :location)%></td>
+	</tr>
+	<tr>
+		<th>Asking Price?</th>
+		<td><%= text_field(:job, :asking_price)%></td>
+	</tr>
+	<tr>
+		<th>Sold Price?</th>
+		<td><%= text_field(:job, :sold_price)%></td>
+	</tr>
+</table>

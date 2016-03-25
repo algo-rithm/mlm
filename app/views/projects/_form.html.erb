@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<td><%= text_field(:project, :name)%></td>
+	</tr>
+	<tr>
+		<th>Client</th>
+		<td><%= select(:project, :client_id, @client_list )%></td>
+	</tr>
+	<tr>
+		<th>Start Date</th>
+		<td><%= text_field(:project, :start_date) %></td>
+	</tr>
+	<tr>
+		<th>Goal Date</th>
+		<td><%= text_field(:project, :goal_date) %></td>
+	</tr>
+	<tr>
+		<th>Description</th>
+		<td><%= text_area(:project, :description, :rows => 4)%></td>
+	</tr>
+</table>

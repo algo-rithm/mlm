@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: fabrics
+#
+#  id             :integer          not null, primary key
+#  name           :string(255)
+#  notes          :text
+#  length         :decimal(, )
+#  silktype       :string(255)
+#  purchase_date  :date
+#  purchase_price :decimal(, )
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  notes: MyText
+  length: 9.99
+  silktype: MyString
+  purchase_date: 2013-06-10
+  purchase_price: 9.99
+
+two:
+  name: MyString
+  notes: MyText
+  length: 9.99
+  silktype: MyString
+  purchase_date: 2013-06-10
+  purchase_price: 9.99

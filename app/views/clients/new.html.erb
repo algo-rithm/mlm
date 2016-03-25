@@ -1,0 +1,46 @@
+<% provide(:title, 'New Client')%>
+<%= render 'shared/mgr_header' %>
+
+
+<div class="row mgr-content">
+<h1>New Client</h1>	
+	
+	<div class="span6 offset3">
+		<%= form_for(@client) do |f| %>
+		
+			
+		
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			
+			<%= f.label :phone %>
+			<%= f.text_field :phone %>
+			
+			<%= f.label :street_one, "Street 1" %>
+			<%= f.text_field :street_one %>
+			
+			<%= f.label :street_two, "Street 2" %>
+			<%= f.text_field :street_two %>
+			
+			<%= f.label :city %>
+			<%= f.text_field :city %>
+			
+			<%= f.label :state %>
+			<%= f.text_field :state %>
+			
+			<%= f.label :zip %>
+			<%= f.text_field :zip %>
+			
+			<%= f.label :email %>
+			<%= f.text_field :email %>
+			
+			<%= f.label :contact %>
+			<%= f.text_field :contact %>
+				
+			<br />
+			
+			<%= f.submit "Create new Client", class: "btn btn-large btn-primary" %>
+			
+		<% end %>
+	</div>
+</div>

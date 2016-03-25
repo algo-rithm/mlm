@@ -1,0 +1,40 @@
+<% provide(:title, "Clients") %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	<div class="span12">
+		<h1>All Clients</h1>
+		
+		<table class="table table-striped">
+  			<tr>
+    			<th>Name</th>
+    			<th>Phone</th>
+    			<th>Street 1</th>
+    			<th>Street 2</th>
+    			<th>City</th>
+    			<th>State</th>
+    			<th>Zip</th>
+    			<th>Contact</th>
+    			<th>Email</th>
+    			<th></th>
+    			<th></th>
+  			</tr>
+		
+		<% @clients.each do |client| %>
+  			<tr>
+    			<td><%= client.name %></td>
+    			<td><%= client.phone %></td>
+    			<td><%= client.street_one %></td>
+    			<td><%= client.street_two %></td>
+    			<td><%= client.city %></td>
+    			<td><%= client.state %></td>
+    			<td><%= client.zip %></td>
+    			<td><%= client.contact %></td>
+    			<td><%= client.email %></td>
+    			<td><%= link_to 'Show', client %></td>
+    			<td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  			</tr>
+		<% end %>
+		</table>	
+	</div> 
+</div>

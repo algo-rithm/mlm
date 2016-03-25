@@ -1,0 +1,26 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<td><%= text_field(:fabric, :name)%></td>
+	</tr>
+	<tr>
+		<th>Type</th>
+		<td><%= text_field(:fabric, :silktype)%></td>
+	</tr>
+	<tr>
+		<th>Length (in yards)</th>
+		<td><%= text_field(:fabric, :length )%></td>
+	</tr>
+	<tr>
+		<th>Purchase Date</th>
+		<td><%= text_field(:fabric, :purchase_date) %></td>
+	</tr>
+	<tr>
+		<th>Purchase Price</th>
+		<td><%= text_field(:fabric, :purchase_price) %></td>
+	</tr>
+	<tr>
+		<th>Notes</th>
+		<td><%= text_area(:fabric, :notes, :cols => 16, :rows => 5)%></td>
+	</tr>
+</table>

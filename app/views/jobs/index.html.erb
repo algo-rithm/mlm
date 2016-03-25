@@ -1,0 +1,44 @@
+<% provide(:title, "Jobs") %>
+<%= render 'shared/mgr_header' %>
+
+<div class="row mgr-content">
+	<div class="span12">
+		<h1>All Jobs</h1>
+		
+		<table class="table table-striped">
+  			<tr>
+    			<th>Name</th>
+    			<th>Project</th>
+    			<th>SKU</th>
+    			<th>Fabric</th>
+    			<th>Prereq(s)</th>
+    			<th>Died?</th>
+    			<th>Finished?</th>
+    			<th>Sewn?</th>
+    			<th>Packaged?</th>
+    			<th>Asking Price</th>
+    			<th>Sold Price</th>
+    			<th>location</th>
+    			<th></th>
+  			</tr>
+		
+		<% @jobs.each do |job| %>
+  			<tr>
+    			<td><%= job.name %></td>
+    			<td><%= job.project_id %></td>
+    			<td><%= job.sku %></td>
+    			<td><%= job.fabric_id %></td>
+    			<td><%= job.prerequisites %></td>
+    			<td><%= job.died %></td>
+    			<td><%= job.finished %></td>
+    			<td><%= job.sewn %></td>
+    			<td><%= job.packaged %></td>
+    			<td><%= job.asking_price %></td>
+    			<td><%= job.sold_price %></td>
+    			<td><%= job.location %></td>
+    			<td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  			</tr>
+		<% end %>
+		</table>	
+	</div> 
+</div>
